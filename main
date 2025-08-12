@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Sundhar B - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --primary-color: #3498db;
+      --card-bg: white;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #f5f5f5;
+      --primary-color: #4aa3ff;
+      --card-bg: #2a2a2a;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: linear-gradient(135deg, #2c3e50, var(--primary-color));
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.8rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary-color);
+    }
+    .theme-toggle {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      margin-top: 5px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, background 0.3s;
+      animation: slideUp 0.8s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .skills ul, .education ul, .certifications ul {
+      list-style: none;
+    }
+    .skills li, .education li, .certifications li {
+      margin-bottom: 8px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 20px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Deepak Sundhar B</h1>
+  <p>Cyber Security Enthusiast | Java Developer | Bug Bounty Hunter</p>
+  <p>📧 deepaksundharb@gmail.com | 📞 +91 8072435942</p>
+  <p>
+    <a href="https://www.linkedin.com/in/deepak-sundhar-b-4aa6b9294" style="color:white;">LinkedIn</a> | 
+    <a href="https://github.com/deepak-ff" style="color:white;">GitHub</a>
+  </p>
+</header>
+
+<nav>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="skills" class="skills card">
+  <h2>Skills</h2>
+  <ul>
+    <li>Programming: Java, HTML</li>
+    <li>Security Tools: Wireshark, Burp Suite, Metasploit</li>
+    <li>Database: MySQL</li>
+    <li>Soft Skills: Problem Solving, Teamwork, Time Management</li>
+  </ul>
+</section>
+
+<section id="education" class="education card">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>B.E. CSE (Cyber Security)</strong> - Dr. Mahalingam College of Engineering and Technology (2026) - CGPA: 9.1/10</li>
+    <li><strong>HSC</strong> - Jaycees Matriculation Higher Secondary School (2023) - 92%</li>
+    <li><strong>SSLC</strong> - Jaycees Matriculation Higher Secondary School (2021) - Pass</li>
+  </ul>
+</section>
+
+<section id="projects" class="card">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Network Security Analyzer</h3>
+      <p>Developed a security tool using Wireshark and custom scripts for threat detection.</p>
+    </div>
+    <div class="project-card">
+      <h3>Java-Based Password Manager</h3>
+      <p>Built a secure password manager with encryption for personal use.</p>
+    </div>
+    <div class="project-card">
+      <h3>Bug Bounty Reports</h3>
+      <p>Participated in ethical hacking and reported security vulnerabilities in live platforms.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="certifications card">
+  <h2>Certifications</h2>
+  <ul>
+    <li>ISC2 Bug Bounty</li>
+    <li>Fundamentals of Python Programming</li>
+    <li>Online Self-Based Training in Cyber Security</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Internships</h2>
+  <ul>
+    <li><strong>CubeAi Solutions Pvt Ltd (June 2025)</strong> - Cyber Security Engineer Intern. Learned Automotive Cyber Security and collaborated on cyber domain projects.</li>
+  </ul>
+</section>
+
+<section id="contact" class="contact card">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:deepaksundharb@gmail.com">deepaksundharb@gmail.com</a></p>
+  <p>Phone: +91 8072435942</p>
+</section>
+
+<footer>
+  &copy; 2025 Deepak Sundhar B | All Rights Reserved
+</footer>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+<script>
+  function toggleTheme() {
+    document.body.dataset.theme = document.body.dataset.theme === "dark" ? "" : "dark";
+    document.querySelector(".theme-toggle").textContent = document.body.dataset.theme === "dark" ? "☀️" : "🌙";
+  }
+</script>
+
+</body>
+</html>
